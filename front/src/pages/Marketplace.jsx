@@ -10,10 +10,8 @@ import Avon from './Avon';
 const MarketplaceDefault = () => {
   return (
     <Container>
-      <Router>
-        <IntroSection />
-        <CompanyList />
-      </Router>
+      <IntroSection />
+      <CompanyList />
     </Container>
   )
 }
