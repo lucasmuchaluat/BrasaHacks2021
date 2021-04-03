@@ -8,6 +8,14 @@ const CardContainer = styled.div`
   ${'' /* margin-right: 10px; */}
 `;
 
+const Description = styled.p`
+  font-weight: normal;
+  font-size: 14px;
+  color: #a1a8b3;
+  margin: 0px;
+  margin-bottom: 30px;
+`;
+
 const ItemPicture = styled.img`
   max-height: 150px;
   max-width: 150px;
@@ -20,6 +28,22 @@ const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+const Items = styled.p`
+font-weight: normal;
+font-size: 14px;
+color: #a1a8b3;
+margin: 0px;
+margin-bottom: 30px;
+`;
+
+const ItemQ = styled.p`
+font-weight: normal;
+font-size: 14px;
+color: #a1a8b3;
+margin: 0px;
+margin-bottom: 30px;
 `;
 
 const Title = styled.h3`
@@ -36,4 +60,4 @@ const Price = styled.p`
 `;
 
 
-export { CardContainer, ItemPicture, ItemInfo, Title, Price};
+export { CardContainer, ItemPicture, ItemInfo, Title, Price, Description, ItemQ, Items};
