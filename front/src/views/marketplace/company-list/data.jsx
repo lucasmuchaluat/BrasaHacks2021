@@ -14,36 +14,36 @@ const STUB_DATA = [
     alt: 'Avon Logo',
     href: '/marketplace/avon'
   },
-  {
-    id: 1,
-    name: 'Adidas (STUB)',
-    category: 'Sportswear',
-    items: 132,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
-    logo: AdidasLogo,
-    alt: 'Adidas Logo',
-    href: '/marketplace'
-  },
-  {
-    id: 2,
-    name: 'Stella Artois (STUB)',
-    category: 'Food and Beverage',
-    items: 2,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
-    logo: StellaLogo,
-    alt: 'Stella Artois Logo',
-    href: '/marketplace'
-  },
-  {
-    id: 3,
-    name: 'H&M (STUB)',
-    category: 'Clothing',
-    items: 113,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
-    logo: HMLogo,
-    alt: 'H&M Logo',
-    href: '/marketplace'
-  },
+  // {
+  //   id: 1,
+  //   name: 'Adidas (STUB)',
+  //   category: 'Sportswear',
+  //   items: 132,
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
+  //   logo: AdidasLogo,
+  //   alt: 'Adidas Logo',
+  //   href: '/marketplace'
+  // },
+  // {
+  //   id: 2,
+  //   name: 'Stella Artois (STUB)',
+  //   category: 'Food and Beverage',
+  //   items: 2,
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
+  //   logo: StellaLogo,
+  //   alt: 'Stella Artois Logo',
+  //   href: '/marketplace'
+  // },
+  // {
+  //   id: 3,
+  //   name: 'H&M (STUB)',
+  //   category: 'Clothing',
+  //   items: 113,
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)",
+  //   logo: HMLogo,
+  //   alt: 'H&M Logo',
+  //   href: '/marketplace'
+  // },
 ]
 
 export { STUB_DATA };
