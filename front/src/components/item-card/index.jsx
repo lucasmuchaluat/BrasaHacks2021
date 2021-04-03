@@ -21,7 +21,7 @@ const calculateComission = (pct, min, price) => {
 
 const ItemCard = (props) => {
   return (
-    <CardContainer>
+    <CardContainer onClick={props.quantity > 0 ? props.onClick : null}>
       <ItemPicture src={props.img}/>
       <ItemInfo>
         <Title>{props.name}</Title>
@@ -29,7 +29,9 @@ const ItemCard = (props) => {
         <Comission>{ calculateComission(props.comission, props.minimum, props.price)}</Comission>
       </ItemInfo>
     </CardContainer>
+    
   );
 }
 
 export default ItemCard;
+export { calculateComission };

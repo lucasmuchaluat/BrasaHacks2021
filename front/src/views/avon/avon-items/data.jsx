@@ -2,6 +2,8 @@ import SPFCTee from '../../../assets/spfc.jpeg';
 
 const STUB_ITEMS = [
   {
+    id: 0,
+    quantity: 4,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
@@ -11,6 +13,8 @@ const STUB_ITEMS = [
       '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
   },
   {
+    id: 1,
+    quantity: 2,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
@@ -20,6 +24,8 @@ const STUB_ITEMS = [
       '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
   },
   {
+    id: 2,
+    quantity: 18,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
@@ -29,6 +35,8 @@ const STUB_ITEMS = [
       '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
   },
   {
+    id: 3,
+    quantity: 20,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
@@ -38,6 +46,8 @@ const STUB_ITEMS = [
       '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
   },
   {
+    id: 4,
+    quantity: 3,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
@@ -47,6 +57,8 @@ const STUB_ITEMS = [
       '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
   },
   {
+    id: 5,
+    quantity: 0,
     img: SPFCTee,
     name: 'Sao Paulo Futebol Club Tee',
     price: 299.99,
