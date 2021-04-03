@@ -5,6 +5,10 @@ const CardContainer = styled.div`
   height: 156px;
   display: flex;
   margin-bottom: 70px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const ItemPicture = styled.img`
