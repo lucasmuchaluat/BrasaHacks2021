@@ -11,17 +11,29 @@ import PopupCard from '../../../components/popup-card/index';
 import { Wrapper, ListOfItems } from './styles';
 
 // data
-import {STUB_ITEMS} from './data'
+import { STUB_ITEMS, STUB_CATS } from './data'
 
 class AvonItems extends React.Component {
 
-  state = {
-    modalOpen: false,
+  // state = {modalOpen: false}
+
+  constructor() {
+    super();
+    this.state = {
+      modalOpen: false,
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleClick(el) {
     this.setState({ modalOpen: true })
     this.currItem = el;
+  }
+
+  handleSubmit(el) {
+    this.setState({ modalOpen: false });
+    console.log(`selectionado ${el}`);
   }
 
   render() {
@@ -36,7 +48,7 @@ class AvonItems extends React.Component {
           onClose={() => this.setState({ modalOpen: false })}
           style={{ outline: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
-          <PopupCard {...this.currItem} />
+          <PopupCard {...this.currItem} catalogs={STUB_CATS} click={this.handleSubmit}/>
         </Modal>
       )
     }
