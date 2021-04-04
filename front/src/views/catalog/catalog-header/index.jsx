@@ -5,7 +5,7 @@ const CatalogHeader = () => {
   return (
     <Wrapper>
       <SectionTitle>Your Catalogs</SectionTitle>
-      <Subtext>Browse your catalogs</Subtext>
+      {/* <Subtext>Browse your catalogs</Subtext> */}
     </Wrapper>
   ); 
 }
