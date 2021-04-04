@@ -45,7 +45,7 @@ export function Catalog() {
         <>
             <i>{activeProduct.name}</i>
             <br />
-            Price: <b>💲{activeProduct.price}</b>
+            Price: <b>R${activeProduct.price}</b>
         </>
     );
 
