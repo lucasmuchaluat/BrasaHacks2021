@@ -13,14 +13,14 @@ import {
 
 
 const CatalogPopup = (props) => {
-  const itemIDs = props.itemIDs.map((el) => <Separator><ItemID>{el}</ItemID> <Delete> Delete </Delete></Separator>); 
+  const itemIDs = props.products.map((el) => <Separator><ItemID>{el.name}</ItemID> <Delete> Delete </Delete></Separator>); 
 
   return (
     <Wrapper>
       <ItemInfo>
         <Title>{ props.name }</Title>
         <Description>{props.description}</Description>
-        <ItemQ>{`${props.itemQuantity}  items in this catalog`}</ItemQ>
+        <ItemQ>{`${props.products.length}  items in this catalog`}</ItemQ>
         {itemIDs}
       </ItemInfo>
     </Wrapper>

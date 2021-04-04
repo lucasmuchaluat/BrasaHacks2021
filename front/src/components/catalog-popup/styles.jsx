@@ -49,7 +49,7 @@ margin-block-end: 10px;
 
 
 const Separator = styled.div`
-  margin: 40px 0px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
 `;
