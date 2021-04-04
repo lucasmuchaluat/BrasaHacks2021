@@ -1,18 +1,36 @@
+/*
+Bot tasks:
+  - receber codigo e devolver catalogo (lista) -> integrar na API do vtex
+  - montar o carrinho ( adicionar/ remover)
+  - mais detalhes -> enviar foto e descricao
+  - fechar a compra -> lista os itens no carrinho e o valor total, integra na plataforma da VTEX
+       - envia codigo/QR do pix
+  - envia comprovante de pagamento
+
+*/
+
 import React, { useState } from 'react';
 import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
 import logo from './assets/logo.png';
 
-function Echo() {
-    const [text, setText] = useState('Say something');
+function ConsultaCodigo(codigo: string){
+    //Consulta o back (?? Consulta estoques??) e devolve o json do catalogo
+    return;
+}
+
+function RecebeCodigo() {
+    const [codigo, setText] = useState('Envie o código do catálogo que quer consultar');
 
     useText(({ text }) => {
         setText(text);
     });
 
+    //var json = ConsultaCodigo(codigo);
+
     return (
         <Text>
-            <i>{text}</i>
+            <i>{codigo}</i>
         </Text>
     );
 }
@@ -40,10 +58,9 @@ function Logo() {
 export function App() {
     return (
         <>
-            <Text>Welcome to Urban Bot! Type /echo or /logo.</Text>
             <Router>
-                <Route path="/echo">
-                    <Echo />
+                <Route path="/start">
+                    <RecebeCodigo />
                 </Route>
                 <Route path="/logo">
                     <Logo />
