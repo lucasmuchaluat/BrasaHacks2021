@@ -33,7 +33,8 @@
     "rxjs": "^6.5.4",
     "swagger-ui-express": "^4.1.6",
     "typeorm": "^0.2.32",
-    "class-validator": "^0.13.1"
+    "class-validator": "^0.13.1",
+    "ts-node": "9.0.0"
   },
   "devDependencies": {
     "@nestjs/common": "^7.4.4",
