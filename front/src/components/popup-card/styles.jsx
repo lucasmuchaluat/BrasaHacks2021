@@ -7,11 +7,16 @@ const Wrapper = styled.div`
   background-color: white;
 `;
 
-const ItemPicture = styled.div`
-  width: 600px;
-  height: 100%;
-  background: url(${(props) => props.img} );
-  background-position: center;
+// const ItemPicture = styled.div`
+//   width: 600px;
+//   height: 100%;
+//   background: url(${(props) => props.img} );
+//   background-position: center;
+//   margin-right: 10px;
+// `;
+const ItemPicture = styled.img`
+  max-width: 484px;
+  max-height: 586px;
   margin-right: 10px;
 `;
 
