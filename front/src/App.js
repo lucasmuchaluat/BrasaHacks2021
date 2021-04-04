@@ -16,10 +16,9 @@ function App() {
         <Header />
         <div style={{ display: 'flex' }}>
           <SideTab />
-          <Route path="/marketplace" component={Marketplace} />
+          <Route exact path="/marketplace" component={Marketplace} />
           <Route exact path="/catalogs" component={Catalogs} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/avon" component={Avon} />
+          <Redirect from='/' to='/marketplace'/>
         </div>
       </Router>
     </div>
