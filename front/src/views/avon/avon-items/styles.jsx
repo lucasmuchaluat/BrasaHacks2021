@@ -11,7 +11,7 @@ const ListOfItems = styled.div`
   margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 `;
 
 export { Wrapper, ListOfItems };

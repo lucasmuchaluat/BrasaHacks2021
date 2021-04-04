@@ -1,6 +1,7 @@
 // dependencies
 import React from 'react'
 import { Modal } from '@material-ui/core';
+import axios from 'axios'
 
 // components
 import SearchBar from '../../../components/search-bar/index';
@@ -39,8 +40,18 @@ class Catalog extends React.Component {
   }
 
   handleSubmit(el) {
-    console.log('printing here: ' + el);
-    this.setState({createOpen: false})
+    
+    const requestBody = {
+      name: el,
+      productIds: [],
+      description: 'no description',
+    }
+
+    axios.post('https://quiet-river-22739.herokuapp.com/catalogs', requestBody)
+      .then(response => {
+        console.log(response);
+        this.setState({ createOpen: false });
+      })
   }
 
   handleOpenCreate() {

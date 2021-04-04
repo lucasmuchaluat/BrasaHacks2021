@@ -84,8 +84,6 @@ class AvonItems extends React.Component {
 
         }
       })
-
-    // axios.patch('https://quiet-river-22739.herokuapp.com/catalogs');
   }
 
   render() {
