@@ -4,6 +4,7 @@ import {
   ItemInfo,
   ItemQ,
   Items,
+  LixoIcon
 } from './styles';
 import avon from '../../assets/company-logos/avon.svg'
 import lixo from '../../assets/catalog-assets/lixo.svg'
@@ -23,7 +24,7 @@ const CatalogCard = (props) => {
           <ItemQ>{`${props.products.length}  items in this catalog`} </ItemQ>
           <ItemQ>{`Catalog ID: ${props.catalogId}`}</ItemQ>
         </ItemInfo>  
-        <img onClick={props.onClick1} src={lixo} style={{marginLeft: "auto", width: "38px",  marginRight: "50px"}}/>
+        <LixoIcon onClick={props.onClick1} src={lixo}/>
       </CardContainer>
 
   );

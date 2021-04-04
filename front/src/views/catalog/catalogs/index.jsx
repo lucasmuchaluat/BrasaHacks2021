@@ -32,7 +32,8 @@ class Catalog extends React.Component {
       createOpen: false,
       loaded: false,
       catsLoaded: false,
-      requestSent: false
+      requestSent: false,
+      resetState: 1,
     };
      
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,6 +46,7 @@ class Catalog extends React.Component {
   }
 
   loadCats() {
+    this.setState({catsLoaded: false})
     axios.get('https://quiet-river-22739.herokuapp.com/catalogs')
       .then(response => {
         this.cats = response.data;
@@ -66,8 +68,9 @@ class Catalog extends React.Component {
     this.active = false;
     axios.delete('https://quiet-river-22739.herokuapp.com/catalogs/' + el.catalogId)
       .then(response => {
-        console.log(response);
-        this.setState({requestSent: !this.state.requestSent});
+        // console.log(response);
+        this.loadCats();
+        // this.setState({ resetState: (this.state.resetState + 1) % 2 });
       })
 
   }
@@ -102,8 +105,9 @@ class Catalog extends React.Component {
 
     axios.post('https://quiet-river-22739.herokuapp.com/catalogs', requestBody)
       .then(response => {
-        console.log(response);
+        // console.log(response);
         this.setState({ createOpen: false });
+        this.loadCats();
       })
   }
 

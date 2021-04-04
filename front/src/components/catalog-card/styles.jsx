@@ -49,6 +49,13 @@ const ItemInfo = styled.div`
   left-margin: 30px;
 `;
 
+const LixoIcon = styled.img`
+  margin-left: auto;
+   width: 38px;
+   margin-right: 50px;
+   &:hover {
+     cursor: pointer;
+   }
+`;
 
-
-export { CatName, CardContainer, ItemQ, Items, ItemInfo};
+export { CatName, CardContainer, ItemQ, Items, ItemInfo, LixoIcon};
