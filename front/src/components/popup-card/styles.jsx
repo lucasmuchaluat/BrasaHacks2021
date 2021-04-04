@@ -56,6 +56,14 @@ const Separator = styled.div`
   margin: 40px 0px;
 `;
 
+const Dropdown = styled.select`
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  padding-left: 15px;
+  outline: none;
+`;
+
 export {
   Wrapper,
   ItemPicture,
@@ -65,4 +73,5 @@ export {
   Price,
   Comission,
   Separator,
+  Dropdown
 };

@@ -22,9 +22,11 @@ const Title = styled.h3`
 const Description = styled.p`
   font-weight: normal;
   font-size: 14px;
-  color: #a1a8b3;
+  color: #717786;
   margin: 0px;
   margin-bottom: 30px;
+  margin-block-start: 0px;
+  margin-block-end: 10px;
 `;
 
 const Items = styled.p`
@@ -38,23 +40,27 @@ margin-bottom: 30px;
 const ItemQ = styled.p`
 font-weight: normal;
 font-size: 14px;
-color: #a1a8b3;
+color: #717786;
 margin: 0px;
 margin-bottom: 30px;
+margin-block-start: 0px;
+margin-block-end: 10px;
 `;
 
-const Price = styled.p`
-  font-weight: normal;
-  font-size: 23px;
-  color: #717786;
-  margin: 0px;
-  margin-bottom: 8px;
-`;
 
 const Separator = styled.div`
-  border: 1px solid #a1a8b3;
   margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
 `;
+
+const ItemID = styled.p`
+
+`
+const Delete = styled.p`
+  color: red;
+
+`
 
 export {
   Wrapper,
@@ -63,6 +69,7 @@ export {
   Description,
   Items,
   ItemQ,
-  Price,
   Separator,
+  ItemID,
+  Delete
 };

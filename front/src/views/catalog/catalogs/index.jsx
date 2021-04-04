@@ -1,31 +1,66 @@
 // dependencies
 import React from 'react'
 import { Modal } from '@material-ui/core';
+import axios from 'axios'
 
 // components
 import SearchBar from '../../../components/search-bar/index';
 import CatalogCard from '../../../components/catalog-card/index';
 import CatalogPopup from '../../../components/catalog-popup/index';
+import CreateCatalog from '../catalog-create-new/index';
+import Button from '../../../components/button/index';
 
 // styles
-import { Wrapper, ListOfItems } from './styles';
+import { Wrapper, ListOfItems, Rectangle, CatName} from './styles';
 
 // data
 import {CATALOG_ITEMS} from './data'
+import avon from '../../../assets/company-logos/avon.svg'
 
 class Catalog extends React.Component {
-  state = {
-    modalOpen: false,
+
+  constructor() {
+    super();
+    this.state = {
+      modalOpen: false,
+      createOpen: false,
+    };
+     
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleOpenCreate = this.handleOpenCreate.bind(this);
   }
 
   handleClick(el) {
-    console.log("SEHEES");
     this.setState({ modalOpen: true })
     this.currItem = el;
   }
 
+  handleLixo(el) {
+    console.log(el.id);
+  }
+
+  handleSubmit(el) {
+    
+    const requestBody = {
+      name: el,
+      productIds: [],
+      description: 'no description',
+    }
+
+    axios.post('https://quiet-river-22739.herokuapp.com/catalogs', requestBody)
+      .then(response => {
+        console.log(response);
+        this.setState({ createOpen: false });
+      })
+  }
+
+  handleOpenCreate() {
+    this.setState({ createOpen: true });
+  }
+
   render() {
-    const items = CATALOG_ITEMS.map((el, i) => <CatalogCard key={i} {...el} onClick={() => this.handleClick(el)} />);
+    const items = CATALOG_ITEMS.map((el, i) => <CatalogCard key={i} {...el} onClick={() => this.handleClick(el)} onClick1={() => this.handleLixo(el)}/>);
+
     
     let item_popup = null;
     if (this.currItem !== null) {
@@ -41,9 +76,21 @@ class Catalog extends React.Component {
       )
     }
 
+    let create_popup = (
+      <Modal
+        open={this.state.createOpen}
+        onClose={() => this.setState({ createOpen: false})}
+        style={{ outline: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <CreateCatalog click={ this.handleSubmit}/>
+      </Modal>
+    )
+
     return (
       <Wrapper>
         {item_popup}
+        {create_popup}
+        <Button value="Create new catalog" onClick={() => this.handleOpenCreate()}/>
         <SearchBar placeholder="Search for a catalog..." />
         <ListOfItems>
           {items}

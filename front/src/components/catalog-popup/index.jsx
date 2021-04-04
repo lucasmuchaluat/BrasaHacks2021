@@ -6,28 +6,22 @@ import {
   Description,
   Items,
   ItemQ,
-  Price,
   Separator,
+  ItemID,
+  Delete,
 } from './styles';
 
 
 const CatalogPopup = (props) => {
+  const itemIDs = props.itemIDs.map((el) => <Separator><ItemID>{el}</ItemID> <Delete> Delete </Delete></Separator>); 
 
   return (
     <Wrapper>
       <ItemInfo>
         <Title>{ props.name }</Title>
         <Description>{props.description}</Description>
-        <ItemQ>{`${props.itemQuantity}  items`}</ItemQ>
-        <table>
-          <tbody>
-            {props.itemIDs.map((itemID) =>(
-              <tr>{itemID}</tr>
-            ))}
-          </tbody>
-        </table>
-        <Price>{ `R$ ${props.price}` }</Price> 
-        <Separator />
+        <ItemQ>{`${props.itemQuantity}  items in this catalog`}</ItemQ>
+        {itemIDs}
       </ItemInfo>
     </Wrapper>
   )
