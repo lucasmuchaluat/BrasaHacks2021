@@ -34,6 +34,10 @@ class Catalog extends React.Component {
     this.currItem = el;
   }
 
+  handleLixo(el) {
+    console.log(el.id);
+  }
+
   handleSubmit(el) {
     console.log('printing here: ' + el);
     this.setState({createOpen: false})
@@ -44,7 +48,8 @@ class Catalog extends React.Component {
   }
 
   render() {
-    const items = CATALOG_ITEMS.map((el, i) => <CatalogCard key={i} {...el} onClick={() => this.handleClick(el)} />);
+    const items = CATALOG_ITEMS.map((el, i) => <CatalogCard key={i} {...el} onClick={() => this.handleClick(el)} onClick1={() => this.handleLixo(el)}/>);
+
     
     let item_popup = null;
     if (this.currItem !== null) {

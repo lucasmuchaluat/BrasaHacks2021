@@ -11,7 +11,6 @@ import lixo from '../../assets/catalog-assets/lixo.svg'
 
 
 const CatalogCard = (props) => {
-  const items = props.itemIDs.map((el, i) => <Items key={i} {...el} onClick={() => this.handleClick(el)} />);
 
 
   return (
@@ -22,7 +21,7 @@ const CatalogCard = (props) => {
         <ItemQ>Avon</ItemQ>
         <ItemQ>{`${props.itemQuantity}  items in this catalog`} </ItemQ>
       </ItemInfo>  
-      <img src={lixo} style={{marginLeft: "auto", width: "38px",  marginRight: "50px"}}/>
+      <img onClick={props.onClick1} src={lixo} style={{marginLeft: "auto", width: "38px",  marginRight: "50px"}}/>
     </CardContainer>
   );
 }

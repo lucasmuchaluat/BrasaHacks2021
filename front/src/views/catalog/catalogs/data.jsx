@@ -12,6 +12,7 @@ const CATALOG_ITEMS = [
         ],
         description:
           '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
+        id: 1,    
     },
     {
         img: cover,
@@ -24,6 +25,7 @@ const CATALOG_ITEMS = [
         ],
         description:
           '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
+        id: 2,   
     },
     {
         img: cover,
@@ -36,6 +38,7 @@ const CATALOG_ITEMS = [
         ],
         description:
           '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
+        id: 3, 
     },
     {
         img: cover,
@@ -48,6 +51,7 @@ const CATALOG_ITEMS = [
         ],
         description:
           '[OPTIONAL] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget vulputate ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mollis at ligula vitae commodo. (250 words max)',
+          id: 4,
     },
 ];
 
