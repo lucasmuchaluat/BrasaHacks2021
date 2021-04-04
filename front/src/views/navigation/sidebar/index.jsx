@@ -12,8 +12,8 @@ class SideTab extends React.Component {
       <Container>
         <NavLink to='/marketplace' className='btn'>Marketplace</NavLink>
         <NavLink to='/catalogs' className='btn'>Catalogs</NavLink>
-        <NavLink to='/profile' className='btn'>Profile</NavLink>
-        <NavLink to='/avon' className='btn'>Avon [TEMP]</NavLink>
+        {/* <NavLink to='/profile' className='btn'>Profile</NavLink>
+        <NavLink to='/avon' className='btn'>Avon [TEMP]</NavLink> */}
       </Container>
     )
   }

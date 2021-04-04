@@ -25,7 +25,7 @@ const ItemCard = (props) => {
       <ItemPicture src={props.image} />
       <ItemInfo>
         <Title>{props.name}</Title>
-        <Price>{`R$ ${props.price}`}</Price>
+        <Price>{`R$ ${Number(props.price).toFixed(2)}`}</Price>
         <Comission>
           {calculateComission(
             props.comission,
