@@ -32,6 +32,7 @@ class Catalog extends React.Component {
       createOpen: false,
       loaded: false,
       catsLoaded: false,
+      requestSent: false
     };
      
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -66,9 +67,29 @@ class Catalog extends React.Component {
     axios.delete('https://quiet-river-22739.herokuapp.com/catalogs/' + el.catalogId)
       .then(response => {
         console.log(response);
-        this.setState({ createOpen: false });
+        this.setState({requestSent: !this.state.requestSent});
       })
 
+  }
+
+  handleDelete(el, currItem){
+    console.log("finna delete " + el.productId, currItem.name);
+    const prods = []
+    for (const e of currItem.products) {
+      if (e.productId !== el.productId) {
+        prods.push(e.productId)
+      }
+    }
+    console.log(prods)
+    const requestBody = {
+      name: currItem.name,
+      productIds: [...prods],
+      description: currItem.description,
+    }
+    axios.patch(`https://quiet-river-22739.herokuapp.com/catalogs/${currItem.catalogId}`, requestBody)
+      .then(response => {
+        this.setState({requestSent: !this.state.requestSent});
+      })
   }
 
   handleSubmit(el) {
@@ -106,7 +127,7 @@ class Catalog extends React.Component {
           onClose={() => this.setState({ modalOpen: false })}
           style={{ outline: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
-          <CatalogPopup {...this.currItem} />
+          <CatalogPopup {...this.currItem} onDelete={(el) => this.handleDelete(el, this.currItem)} />
         </Modal>
       )
     }

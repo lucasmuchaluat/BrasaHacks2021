@@ -21,6 +21,7 @@ const CatalogCard = (props) => {
           <CatName>{props.name}</CatName>
           <ItemQ>{props.description}</ItemQ>
           <ItemQ>{`${props.products.length}  items in this catalog`} </ItemQ>
+          <ItemQ>{`Catalog ID: ${props.catalogId}`}</ItemQ>
         </ItemInfo>  
         <img onClick={props.onClick1} src={lixo} style={{marginLeft: "auto", width: "38px",  marginRight: "50px"}}/>
       </CardContainer>
