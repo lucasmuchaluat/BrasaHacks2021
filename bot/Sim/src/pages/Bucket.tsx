@@ -24,14 +24,14 @@ export function Bucket() {
             {addedProductsArray.map((product, index) => {
                 return (
                     <React.Fragment key={product.id}>
-                        <i>{product.name}</i> - <b>{product.count}</b> - <b>{product.price}</b>$ /delete{index + 1}
+                        <i>{product.name}</i> - <b>{product.count}</b> - <b>{Number(product.price).toFixed(2)}</b>$ /delete{index + 1}
                         <br />
                     </React.Fragment>
                 );
             })}
             -----------------------------------
             <br />
-            Preço final: <b>R${totalCount}</b>
+            Preço final: <b>R${Number(totalCount).toFixed(2)}</b>
         </Text>
     );
 }
