@@ -59,7 +59,7 @@ async function ConsultaCodigo(codigo: string) {
 
 
 function RecebeCodigo(){
-    const [codigo, setCodigo] = useState('Envie o código do catálogo que quer consultar');
+    const [codigo, setCodigo] = useState('Envie o código do catálogo que quer consultar. Em seguida, utilize os botoes para comprar!');
     const { navigate } = useRouter();
     useText(({ text }) => {
         ConsultaCodigo(text);
@@ -70,7 +70,7 @@ function RecebeCodigo(){
 
     return (
         <Text>
-            <i>{codigo}</i>
+            {codigo}
         </Text>
     );
 }
@@ -115,7 +115,7 @@ export function App() {
         <ProductsProvider>
             <BucketProvider>
                 <ButtonGroup
-                    title={`Bem vindo(a)${', ' + chat.firstName ?? ''}! Escreva carrinho para ver o carrinho, ou catalogo para ver o catálogo'.`}
+                    title={`Bem vindo(a)${', ' + chat.firstName ?? ''}!`}
                     isReplyButtons
                     isResizedKeyboard
                 >
@@ -124,8 +124,8 @@ export function App() {
                     <Button>finalizar compra</Button>
                 </ButtonGroup>
                 <Router>
-                    <Route path="code">
-                        <RecebeCodigo /> 
+                    <Route path="/start">
+                        <RecebeCodigo />
                     </Route>
                     <Route path="carrinho">
                         <Bucket /> 
@@ -134,6 +134,7 @@ export function App() {
                         <Catalog />
                     </Route>
                     <Route path="finalizar compra">
+                        <Bucket/>
                         <FechaCompra/>
                     </Route>
                 </Router>
