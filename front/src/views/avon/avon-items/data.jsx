@@ -1,5 +1,24 @@
 import SPFCTee from '../../../assets/spfc.jpeg';
 
+const STUB_CATS = [
+  {
+    id: 1,
+    name: 'Catalog 1',
+  },
+  {
+    id: 2,
+    name: 'Catalog 2',
+  },
+  {
+    id: 3,
+    name: 'Catalog 3',
+  },
+  {
+    id: 4,
+    name: 'Catalog 4',
+  },
+]
+
 const STUB_ITEMS = [
   {
     id: 0,
@@ -69,4 +88,4 @@ const STUB_ITEMS = [
   },
 ];
 
-export { STUB_ITEMS };
+export { STUB_ITEMS, STUB_CATS };
