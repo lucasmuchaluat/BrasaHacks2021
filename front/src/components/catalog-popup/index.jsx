@@ -6,7 +6,6 @@ import {
   Description,
   Items,
   ItemQ,
-  Price,
   Separator,
 } from './styles';
 
@@ -18,7 +17,7 @@ const CatalogPopup = (props) => {
       <ItemInfo>
         <Title>{ props.name }</Title>
         <Description>{props.description}</Description>
-        <ItemQ>{`${props.itemQuantity}  items`}</ItemQ>
+        <ItemQ>{`${props.itemQuantity}  items in this catalog`}</ItemQ>
         <table>
           <tbody>
             {props.itemIDs.map((itemID) =>(
@@ -26,7 +25,6 @@ const CatalogPopup = (props) => {
             ))}
           </tbody>
         </table>
-        <Price>{ `R$ ${props.price}` }</Price> 
         <Separator />
       </ItemInfo>
     </Wrapper>

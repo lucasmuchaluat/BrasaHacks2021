@@ -15,7 +15,7 @@ const CATALOG_ITEMS = [
     },
     {
         img: cover,
-        name: 'Catálogo 1',
+        name: 'Catálogo Avon #1 - Orgânicos',
         price: 299.99,
         itemQuantity: 2,
         itemIDs: [

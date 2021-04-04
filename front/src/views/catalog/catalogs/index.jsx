@@ -10,10 +10,11 @@ import CreateCatalog from '../catalog-create-new/index';
 import Button from '../../../components/button/index';
 
 // styles
-import { Wrapper, ListOfItems } from './styles';
+import { Wrapper, ListOfItems, Rectangle, CatName} from './styles';
 
 // data
 import {CATALOG_ITEMS} from './data'
+import avon from '../../../assets/company-logos/avon.svg'
 
 class Catalog extends React.Component {
 
@@ -29,7 +30,6 @@ class Catalog extends React.Component {
   }
 
   handleClick(el) {
-    console.log("SEHEES");
     this.setState({ modalOpen: true })
     this.currItem = el;
   }
