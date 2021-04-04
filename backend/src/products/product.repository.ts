@@ -57,8 +57,7 @@ export class ProductRepository extends Repository<Product> {
         product.price = productDto.price;
         product.stock = productDto.stock;
         product.minimumComission = productDto.minimumComission;
-
-
+        product.image = productDto.image;
         return product;
     }
 
@@ -69,8 +68,7 @@ export class ProductRepository extends Repository<Product> {
         product.price = productDto.price;
         product.stock = productDto.stock;
         product.minimumComission = productDto.minimumComission;
-
-
+        product.image = productDto.image;
         return product;
     }
 

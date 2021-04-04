@@ -25,7 +25,7 @@ export class CatalogRepository extends Repository<Catalog> {
         }
     }
 
-    async deleteCatalogById(catalogId: Long){
+    async deleteCatalogById(catalogId: string){
         try{
             const catalog = await this.findOneOrFail({catalogId});
             await this.remove(catalog);

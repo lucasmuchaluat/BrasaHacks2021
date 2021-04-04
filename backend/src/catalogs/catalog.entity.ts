@@ -7,8 +7,8 @@ import { BaseEntity, Column, Entity, Long, PrimaryGeneratedColumn, ManyToMany, J
 @Entity('catalog')
 export class Catalog extends BaseEntity {
     
-    @PrimaryGeneratedColumn("increment")
-    catalogId: Long;
+    @PrimaryGeneratedColumn("uuid")
+    catalogId: string;
 
     @Column('varchar',  { length: 500, unique: false})
     name: string;

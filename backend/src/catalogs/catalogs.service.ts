@@ -20,16 +20,20 @@ export class CatalogsService {
         return await this.catalogRepository.find();
     }
 
+    async getCatalogById(catalogId: string): Promise<Catalog> {
+        return await this.catalogRepository.findOneOrFail(catalogId);
+    }
+
     async createCatalog(catalogDto: CatalogDto): Promise<Catalog> {
         var products = await this.productRepository.findByIds(catalogDto.productIds);
         return await this.catalogRepository.createCatalog(catalogDto, products);
     }
 
-    async deleteCatalogById(catalogId: Long){
+    async deleteCatalogById(catalogId: string){
         return await this.catalogRepository.deleteCatalogById(catalogId);
     }
 
-    async patchCatalog(catalogId: Long, catalogDto: CatalogDto): Promise<Catalog> {
+    async patchCatalog(catalogId: string, catalogDto: CatalogDto): Promise<Catalog> {
         var products = await this.productRepository.findByIds(catalogDto.productIds);
         return await this.catalogRepository.patchCatalog(catalogId, catalogDto, products);
     }

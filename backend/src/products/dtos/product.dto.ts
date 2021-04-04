@@ -37,4 +37,9 @@ export class ProductDto {
     @IsNotEmpty()
     stock: number;
 
+    @ApiProperty()
+    @IsString()
+    @IsNotEmpty()
+    image: string;
+
 }

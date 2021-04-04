@@ -14,25 +14,30 @@ export class CatalogsController {
     ) {}
 
     @Get('/')
-    getProducts(): Promise<Catalog[]> {
+    getCatalogs(): Promise<Catalog[]> {
         return this.catalogsService.getAll();
+    }
+
+    @Get('/:catalogId')
+    getCatalog(@Param('catalogId') catalogId: string): Promise<Catalog> {
+        return this.catalogsService.getCatalogById(catalogId);
     }
 
     @Post('/')
     @UsePipes(ValidationPipe)
-    createProduct(@Body() catalogDto: CatalogDto): Promise<Catalog> {
+    createCatalog(@Body() catalogDto: CatalogDto): Promise<Catalog> {
         return this.catalogsService.createCatalog(catalogDto);
     }
 
     @Delete('/:catalogId')
     @UsePipes(ValidationPipe)
-    deleteProduct(@Param('catalogId') catalogId: Long) {
+    deleteCatalog(@Param('catalogId') catalogId: string) {
         return this.catalogsService.deleteCatalogById(catalogId);
     }
 
     @Patch('/:catalogId')
     @UsePipes(ValidationPipe)
-    patchProduct(@Param('catalogId') catalogId: Long, @Body() catalogDto: CatalogDto): Promise<Catalog> {
+    patchCatalog(@Param('catalogId') catalogId: string, @Body() catalogDto: CatalogDto): Promise<Catalog> {
         return this.catalogsService.patchCatalog(catalogId, catalogDto);
     }
 

@@ -28,6 +28,9 @@ export class Product extends BaseEntity {
     @Column('decimal')
     stock: number;
 
+    @Column('varchar',  { length: 500, unique: false})
+    image: string;
+
     @ManyToMany(() => Catalog, (catalog: Catalog) => catalog.products)
     catalogs: Catalog[];
 
