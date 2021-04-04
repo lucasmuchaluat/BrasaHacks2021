@@ -6,6 +6,8 @@ import { Modal } from '@material-ui/core';
 import SearchBar from '../../../components/search-bar/index';
 import CatalogCard from '../../../components/catalog-card/index';
 import CatalogPopup from '../../../components/catalog-popup/index';
+import CreateCatalog from '../catalog-create-new/index';
+import Button from '../../../components/button/index';
 
 // styles
 import { Wrapper, ListOfItems } from './styles';
@@ -14,14 +16,31 @@ import { Wrapper, ListOfItems } from './styles';
 import {CATALOG_ITEMS} from './data'
 
 class Catalog extends React.Component {
-  state = {
-    modalOpen: false,
+
+  constructor() {
+    super();
+    this.state = {
+      modalOpen: false,
+      createOpen: false,
+    };
+     
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleOpenCreate = this.handleOpenCreate.bind(this);
   }
 
   handleClick(el) {
     console.log("SEHEES");
     this.setState({ modalOpen: true })
     this.currItem = el;
+  }
+
+  handleSubmit(el) {
+    console.log('printing here: ' + el);
+    this.setState({createOpen: false})
+  }
+
+  handleOpenCreate() {
+    this.setState({ createOpen: true });
   }
 
   render() {
@@ -41,9 +60,21 @@ class Catalog extends React.Component {
       )
     }
 
+    let create_popup = (
+      <Modal
+        open={this.state.createOpen}
+        onClose={() => this.setState({ createOpen: false})}
+        style={{ outline: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <CreateCatalog click={ this.handleSubmit}/>
+      </Modal>
+    )
+
     return (
       <Wrapper>
         {item_popup}
+        {create_popup}
+        <Button value="Create new catalog" onClick={() => this.handleOpenCreate()}/>
         <SearchBar placeholder="Search for a catalog..." />
         <ListOfItems>
           {items}
