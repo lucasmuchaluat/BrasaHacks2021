@@ -49,9 +49,18 @@ margin-block-end: 10px;
 
 
 const Separator = styled.div`
-  border: 1px solid #a1a8b3;
   margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
 `;
+
+const ItemID = styled.p`
+
+`
+const Delete = styled.p`
+  color: red;
+
+`
 
 export {
   Wrapper,
@@ -61,4 +70,6 @@ export {
   Items,
   ItemQ,
   Separator,
+  ItemID,
+  Delete
 };

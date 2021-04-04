@@ -7,10 +7,13 @@ import {
   Items,
   ItemQ,
   Separator,
+  ItemID,
+  Delete,
 } from './styles';
 
 
 const CatalogPopup = (props) => {
+  const itemIDs = props.itemIDs.map((el) => <Separator><ItemID>{el}</ItemID> <Delete> Delete </Delete></Separator>); 
 
   return (
     <Wrapper>
@@ -18,14 +21,7 @@ const CatalogPopup = (props) => {
         <Title>{ props.name }</Title>
         <Description>{props.description}</Description>
         <ItemQ>{`${props.itemQuantity}  items in this catalog`}</ItemQ>
-        <table>
-          <tbody>
-            {props.itemIDs.map((itemID) =>(
-              <tr>{itemID}</tr>
-            ))}
-          </tbody>
-        </table>
-        <Separator />
+        {itemIDs}
       </ItemInfo>
     </Wrapper>
   )
