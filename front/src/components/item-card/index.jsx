@@ -8,8 +8,8 @@ import {
 } from './styles';
 
 const calculateComission = (pct, min, price) => {
-  const percentage = (pct * 100).toFixed(2);
-  const profit = (price * min * pct).toFixed(2);
+  const percentage = (Number(pct) * 100).toFixed(2);
+  const profit = (Number(price) * Number(min) * Number(pct)).toFixed(2);
 
   return (
     `${percentage}% comission per ${min}x items 
@@ -21,15 +21,20 @@ const calculateComission = (pct, min, price) => {
 
 const ItemCard = (props) => {
   return (
-    <CardContainer onClick={props.quantity > 0 ? props.onClick : null}>
-      <ItemPicture src={props.img}/>
+    <CardContainer onClick={props.stock > 0 ? props.onClick : null}>
+      <ItemPicture src={props.image} />
       <ItemInfo>
         <Title>{props.name}</Title>
         <Price>{`R$ ${props.price}`}</Price>
-        <Comission>{ calculateComission(props.comission, props.minimum, props.price)}</Comission>
+        <Comission>
+          {calculateComission(
+            props.comission,
+            props.minimumComission,
+            props.price
+          )}
+        </Comission>
       </ItemInfo>
     </CardContainer>
-    
   );
 }
 
