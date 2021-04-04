@@ -34,7 +34,21 @@ function RecebeCodigo() {
         </Text>
     );
 }
+function MontaCarrinho(){
+    var loop = true;
+    while(loop){
+        const [entrada, setText] = useState('Para adicionar um item ao seu carrinho, envie seu número,\
+        para removê-lo, envie um R+número, exemplo R3 ou R23. Caso queira finalizar a compra, envie "fim"');
+        
+        useText(({ text }) => {
+            setText(text);
+            });
 
+        //if (entrada)
+    }
+    
+    
+}
 function Logo() {
     const [title, setTitle] = useState('Urban Bot');
 
