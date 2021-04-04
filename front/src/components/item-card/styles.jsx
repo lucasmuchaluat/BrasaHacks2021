@@ -5,6 +5,7 @@ const CardContainer = styled.div`
   height: 156px;
   display: flex;
   margin-bottom: 70px;
+  margin-right: 20px;
 
   &:hover {
     cursor: pointer;

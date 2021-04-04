@@ -30,17 +30,17 @@ class PopupCard extends React.Component {
   render() {
     let catalogs = null;
     if (this.props.catalogs) {
-      catalogs = this.props.catalogs.map((el, i) => <option key={i} value={el.id}>{el.name}</option>);
+      catalogs = this.props.catalogs.map((el, i) => <option key={i} value={el.catalogId}>{el.name}</option>);
     }
 
     return (
       <Wrapper>
-        <ItemPicture img={this.props.img} />
+        <ItemPicture img={this.props.image} />
         <ItemInfo>
           <Title>{this.props.name}</Title>
-          <Description>{this.props.description}</Description>
+          <Description>{this.props.bias}</Description>
           <Price>{`R$ ${this.props.price}`}</Price>
-          <Comission>{calculateComission(this.props.comission, this.props.minimum, this.props.price)}</Comission>
+          <Comission>{calculateComission(this.props.comission, this.props.minimumComission, this.props.price)}</Comission>
           <Separator />
           <Dropdown value={this.state.catalog} onChange={(e) => this.handleChange(e)}>
             <option value={0} onChange={(e) => this.handleChange(e)}>Select a category...</option>
