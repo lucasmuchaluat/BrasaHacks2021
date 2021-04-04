@@ -1,7 +1,7 @@
 export class JsonCerto{
-    id: number = 0;
+    id: Number = 0;
     name: string = "";
     images: string[] = [];
-    price: number = 0.0;
+    price = 0.0;
 }
 

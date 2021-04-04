@@ -21,6 +21,7 @@ import { BucketProvider } from './store/bucket';
 import { useBucket } from './store/bucket';
 import axios from 'axios';
 import { JsonCerto } from './jsonConverter';
+import { parse } from 'dotenv/types';
 
 async function ConsultaCodigo(codigo: string) {
     //Consulta o back (?? Consulta estoques??) e devolve o json do catalogo
@@ -45,7 +46,7 @@ async function ConsultaCodigo(codigo: string) {
         nome.name = e.name;
         nome.id = e.productId;
         nome.images = [e.image];
-        nome.price = Number(e.price);
+        nome.price = parseFloat(e.price);
         ar.push(nome);
     }
     console.log(JSON.stringify(ar));
