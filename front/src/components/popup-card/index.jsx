@@ -35,7 +35,7 @@ class PopupCard extends React.Component {
 
     return (
       <Wrapper>
-        <ItemPicture img={this.props.image} />
+        <ItemPicture src={this.props.image} />
         <ItemInfo>
           <Title>{this.props.name}</Title>
           <Description>{this.props.bias}</Description>
