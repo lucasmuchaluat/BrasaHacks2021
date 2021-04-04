@@ -11,16 +11,69 @@ Bot tasks:
 
 import React, { useState } from 'react';
 import fs from 'fs';
-import { Route, Router, Text, ButtonGroup, Button, useText, Image, useBotContext } from '@urban-bot/core';
-import logo from './assets/logo.png';
-import felipe from './assets/felipe.jpeg';
+import { Route, Router, Text, ButtonGroup, Button, useText, Image, useBotContext, useRouter} from '@urban-bot/core';
+import qr from './assets/download.png';
+import checkout from './assets/checkout.png';
 import { Bucket } from './pages/Bucket';
 import { Catalog } from './pages/Catalog';
 import { ProductsProvider } from './store/products';
 import { BucketProvider } from './store/bucket';
 import { useBucket } from './store/bucket';
+import axios from 'axios';
+import { JsonCerto } from './jsonConverter';
+
+async function ConsultaCodigo(codigo: string) {
+    //Consulta o back (?? Consulta estoques??) e devolve o json do catalogo
+
+    console.log(process.env.BACKURL + "/catalogs/" + codigo)
+
+    var objectJson = await axios.get(process.env.BACKURL + "/catalogs/" + codigo,
+        {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                'Content-Type': 'application/json'
+            }
+        })
+
+    console.log(objectJson.data);
+    
+    
+    var ar = Array<JsonCerto>();
+
+    for( var e of objectJson.data.products){
+        var nome = new JsonCerto();
+        nome.name = e.name;
+        nome.id = e.productId;
+        nome.images = [e.image];
+        nome.price = Number(e.price);
+        ar.push(nome);
+    }
+    console.log(JSON.stringify(ar));
+
+    fs.writeFile ('./src/api/products.json', JSON.stringify(ar), function(err) {
+            if (err) throw err;
+            console.log('complete');
+            }
+        );
+}
 
 
+function RecebeCodigo(){
+    const [codigo, setCodigo] = useState('Envie o código do catálogo que quer consultar');
+    const { navigate } = useRouter();
+    useText(({ text }) => {
+        ConsultaCodigo(text);
+        console.log("SET CODIGO FEITO");
+        console.log(codigo);
+        navigate('init');
+    });
+
+    return (
+        <Text>
+            <i>{codigo}</i>
+        </Text>
+    );
+}
 
 function FechaCompra(){
     const { addedProducts, removeProduct } = useBucket();
@@ -30,8 +83,8 @@ function FechaCompra(){
     }
 
     const geraPix = () => {
-        setTitle('Compra confirmada: LinkPIX');
-        setConfirmed(felipe);
+        setTitle('Compra confirmada, pague em: https://bit.ly/3ukJxJb');
+        setConfirmed(qr);
         setButton((
             <ButtonGroup>
             </ButtonGroup>
@@ -39,7 +92,7 @@ function FechaCompra(){
     };
     const [title, setTitle] = useState('');
 
-    const [confirmed, setConfirmed] = useState(logo);
+    const [confirmed, setConfirmed] = useState(checkout);
     const [button, setButton] = useState((
                     <ButtonGroup>
                         <Button onClick={geraPix}>Confirmar compra?</Button>
@@ -71,6 +124,9 @@ export function App() {
                     <Button>finalizar compra</Button>
                 </ButtonGroup>
                 <Router>
+                    <Route path="code">
+                        <RecebeCodigo /> 
+                    </Route>
                     <Route path="carrinho">
                         <Bucket /> 
                     </Route>
