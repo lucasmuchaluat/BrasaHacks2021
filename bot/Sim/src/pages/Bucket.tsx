@@ -2,6 +2,7 @@ import React from 'react';
 import { useBucket } from '../store/bucket';
 import { Text, useCommand } from '@urban-bot/core';
 
+
 export function Bucket() {
     const { addedProducts, removeProduct } = useBucket();
     const addedProductsArray = Array.from(addedProducts.values());
@@ -14,7 +15,7 @@ export function Bucket() {
         removeProduct(addedProductsArray[index]);
     }, /delete\d+/);
 
-    if (addedProductsArray.length === 0) {
+    if (addedProductsArray.length === 0) {  
         return <Text>Não há nada no carrinho!</Text>;
     }
 
@@ -30,7 +31,7 @@ export function Bucket() {
             })}
             -----------------------------------
             <br />
-            Preço final: <b>💲{totalCount}</b>
+            Preço final: <b>R${totalCount}</b>
         </Text>
     );
 }
