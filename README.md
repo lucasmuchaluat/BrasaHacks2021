@@ -4,23 +4,8 @@
 
 
 
-#### Tasks:
+#### Links relevantes:
 
-- [ ] **Página do vendedor:**
-  - [ ] Login
-  - [ ] Todos os produtos
-    - [ ] Opção criar/editar catálogo
-      - [ ] Inserir/Remover produtos
-      - [ ] Editar descrição/avaliação de produtos
-  - [ ] Compartilhar códigos/link do catálogo
-  - [ ] Minhas vendas?
-- [ ] **Chatbot:**
-  - [ ] Mostrar dono/nome do catálogo em questão
-  - [ ] Mostrar produtos no catálogo
-  - [ ] Escolha de produtos (montagem do carrinho)
-    - [ ] Preço final/Resumo do carrinho
-    - [ ] Pagamento
-      - [ ] WPP Pay?
-      - [ ] Pix
-    - [ ] Envio de comprovante
+## Acesso ao marketplace: https://master.d2d8a4o0qw5f3v.amplifyapp.com/marketplace
+## Acesso ao bot do Telegram: t.me/Sim_BRASAHACKS_bot
 
