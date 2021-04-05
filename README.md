@@ -18,4 +18,5 @@ OBS: o intuito do BOT/Site é estar conectada com a plataforma Omnichannel da VT
 #### Acesso ao marketplace: https://master.d2d8a4o0qw5f3v.amplifyapp.com/marketplace
 #### Acesso ao bot do Telegram: https://t.me/Sim_BRASAHACKS_bot
 #### Acesso ao back end de APIs: https://quiet-river-22739.herokuapp.com/api/#/
+#### Demo: https://www.youtube.com/watch?v=uPI2A86aIv0
 
