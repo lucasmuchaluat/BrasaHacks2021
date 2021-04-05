@@ -7,5 +7,5 @@
 ## Links relevantes:
 
 #### Acesso ao marketplace: https://master.d2d8a4o0qw5f3v.amplifyapp.com/marketplace
-#### Acesso ao bot do Telegram: t.me/Sim_BRASAHACKS_bot
+#### Acesso ao bot do Telegram: https://t.me/Sim_BRASAHACKS_bot
 
