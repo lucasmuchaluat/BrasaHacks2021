@@ -13,7 +13,7 @@ import {
 
 
 const CatalogPopup = (props) => {
-  const itemIDs = props.products.map((el) => <Separator><ItemID>{el.name}</ItemID> <Delete onClick={() => props.onDelete(el)}> Delete </Delete ></Separator>); 
+  const itemIDs = props.products.map((el) => <Separator id = {el.productId}><ItemID>{el.name}</ItemID> <Delete onClick={() => props.onDelete(el)}> Delete </Delete ></Separator>); 
 
   return (
     <Wrapper>

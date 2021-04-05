@@ -76,7 +76,6 @@ class Catalog extends React.Component {
   }
 
   handleDelete(el, currItem){
-    console.log("finna delete " + el.productId, currItem.name);
     const prods = []
     for (const e of currItem.products) {
       if (e.productId !== el.productId) {
@@ -92,6 +91,7 @@ class Catalog extends React.Component {
     axios.patch(`https://quiet-river-22739.herokuapp.com/catalogs/${currItem.catalogId}`, requestBody)
       .then(response => {
         this.setState({requestSent: !this.state.requestSent});
+        document.getElementById(el.productId).remove();
       })
   }
 
