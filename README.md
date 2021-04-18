@@ -3,7 +3,7 @@
 ### Desenvolver soluções para aumentar a utilização de canais sociais para compra e venda de produtos, e integrá-las ao OMS na plataforma VTEX de forma que otimize o processo como um todo.
 
 #### Um programa de afiliados VTEX que utiliza e abusa do conceito de "rede" (conexões sociais) através de um BOT de mensagens que facilita a jornada de compra do consumidor. 
-O programa de afiliados permite que qualquer pessoa divulgue os produtos de uma empresa, em troca de alguma recompensa (geralmente uma comissão). Na nossa solução, clientes VTEX poderão aderir sem custo adicional ao programa de afiliados, esses poderão montar catálogos de produtos que podem ser compartilhados nas redes sociais. Em troca, para cada venda realizada através do seu catálogo, o afiliado receberá uma comissão. Nossa solução também conta com um BOT, que permite ao cliente uma visualização do catálogo além de proporcionar uma jornada de compra COMPLETA sem deixar a rede social. 
+O programa de afiliados permite que qualquer pessoa divulgue os produtos de uma empresa, em troca de alguma recompensa (geralmente uma comissão). Na nossa solução, clientes VTEX poderão aderir sem custo adicional ao programa de afiliados, esses poderão montar catálogos de produtos que podem ser compartilhados nas redes sociais. Em troca, para cada venda realizada através do seu catálogo, o afiliado receberá uma comissão. Nossa solução também conta com um BOT, que permite ao cliente uma visualização do catálogo além de proporcionar uma jornada de compra COMPLETA sem que ele deixe a rede social. 
 
 Nossa solução impacta três stakeholders diferentes: 
 * Clientes VTEX: permite um novo canal de divulgação para essas empresas, assim aumentando o alcance para novos consumidores.
